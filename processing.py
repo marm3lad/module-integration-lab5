@@ -12,6 +12,8 @@ def is_good_row(row, row_number):
     row        - все элементы текущей строки;
     row_number - номер строки, начиная с 1.
     """
+    if len(row) < 2:
+        return False  # в строке из одного элемента нечему чередоваться
     for i in range(len(row) - 1):
         if row[i] % 2 == row[i + 1] % 2:
             return False
